@@ -1,0 +1,42 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-website-s-displayed-business-name-from-beauty-parlour-to-bhagyashree-makeover-spa-anywhere-it-appears-in-the-ui-branding-e-g-header-brand-text-and-footer-brand-text-copyright",
+      "featureTitle": "Update the website’s displayed business name from \"Beauty Parlour\" to \"Bhagyashree Makeover & Spa\" anywhere it appears in the UI branding (e.g., header brand text and footer brand text/copyright).",
+      "files": [
+        "frontend/src/components/marketing/Footer.tsx",
+        "frontend/src/components/marketing/HeaderNav.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-seo-and-social-sharing-metadata-to-use-the-business-name-bhagyashree-makeover-spa-html-title-og-title-and-twitter-title",
+      "featureTitle": "Update SEO and social sharing metadata to use the business name \"Bhagyashree Makeover & Spa\" (HTML <title>, og:title, and twitter:title).",
+      "files": [
+        "frontend/index.html"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes all marketing sections (header, hero, highlights, about, service options, services, contact, footer) into a single-page layout.",
+  "frontend/src/components/marketing/HeaderNav.tsx": "Responsive navigation header with logo, smooth-scroll anchor links, mobile menu, and sticky behavior on scroll, now branded as \"Bhagyashree Makeover & Spa\".",
+  "frontend/src/components/marketing/Hero.tsx": "Hero section featuring headline, subheadline, statistics, CTA buttons, and hero banner image with gradient background.",
+  "frontend/src/components/marketing/Highlights.tsx": "Three-column highlight cards showcasing in-parlour services, home services, and no extra cost messaging.",
+  "frontend/src/components/marketing/AboutSection.tsx": "About/Why Choose Us section with four feature cards highlighting expertise, products, personalized care, and flexibility.",
+  "frontend/src/components/marketing/ServiceOptionsSection.tsx": "Two-column comparison cards contrasting in-parlour vs home service options with feature lists.",
+  "frontend/src/components/marketing/ServicesSection.tsx": "Grid of six service cards (makeup, skin/facial, hair care, bridal, saree draping, grooming) with icons and descriptions.",
+  "frontend/src/components/marketing/ContactSection.tsx": "Contact section with WhatsApp CTA, location/availability info, and call-to-action messaging.",
+  "frontend/src/components/marketing/WhatsAppCTA.tsx": "Reusable WhatsApp button component that opens wa.me link with prefilled message and handles unconfigured state gracefully, using ComponentPropsWithoutRef for type-safe Button props.",
+  "frontend/src/components/marketing/Footer.tsx": "Footer with logo, quick links, services list, social media icons, and Caffeine.ai attribution with UTM tracking, now branded as \"Bhagyashree Makeover & Spa\".",
+  "frontend/src/config/whatsapp.ts": "WhatsApp configuration module with phone number and default message settings, including clear setup instructions in comments.",
+  "frontend/src/index.css": "Global styles with warm rose-gold and cream OKLCH color palette for beauty brand aesthetic, supporting both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom fonts (Inter, Playfair Display), extended color tokens, border radius, and shadow utilities.",
+  "frontend/index.html": "HTML entry point with SEO metadata, Open Graph/Twitter cards, and Google Fonts preload for Inter and Playfair Display, now with \"Bhagyashree Makeover & Spa\" branding in all title and meta tags.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks; currently unused as backend has no methods."
+}

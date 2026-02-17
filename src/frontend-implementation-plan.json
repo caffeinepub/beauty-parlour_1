@@ -1,0 +1,44 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update UI branding and metadata to Bhagyashree Makeover & Spa",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "summary": "Replace all visible UI branding text from “Beauty Parlour” to “Bhagyashree Makeover & Spa” in header and footer.",
+      "acceptanceCriteria": [
+        "Header brand text shows exactly \"Bhagyashree Makeover & Spa\" (instead of \"Beauty Parlour\").",
+        "Footer brand text shows exactly \"Bhagyashree Makeover & Spa\" (instead of \"Beauty Parlour\").",
+        "Footer copyright line uses \"Bhagyashree Makeover & Spa\"."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/marketing/HeaderNav.tsx",
+          "operation": "modify",
+          "description": "Update the header brand text to exactly “Bhagyashree Makeover & Spa” anywhere the header currently displays “Beauty Parlour” (keep logo file unchanged). Optionally align the logo alt text with the new business name while preserving the same image asset."
+        },
+        {
+          "path": "frontend/src/components/marketing/Footer.tsx",
+          "operation": "modify",
+          "description": "Update footer brand text and the copyright line to exactly use “Bhagyashree Makeover & Spa” instead of “Beauty Parlour” (keep existing layout, links, and logo asset unchanged)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Update SEO and social sharing title metadata to use “Bhagyashree Makeover & Spa”.",
+      "acceptanceCriteria": [
+        "The HTML document <title> includes \"Bhagyashree Makeover & Spa\".",
+        "OpenGraph title (og:title) includes \"Bhagyashree Makeover & Spa\".",
+        "Twitter title (twitter:title) includes \"Bhagyashree Makeover & Spa\"."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Replace occurrences of “Beauty Parlour” in the document <title>, og:title, and twitter:title meta tags so each includes “Bhagyashree Makeover & Spa”, preserving other descriptive wording and keeping existing social image references unchanged."
+        }
+      ]
+    }
+  ]
+}

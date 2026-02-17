@@ -1,0 +1,60 @@
+{
+  "kind": "build_request",
+  "title": "Update business name to Bhagyashree Makeover & Spa",
+  "projectName": "Bhagyashree Makeover & Spa",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-8",
+      "text": "Update the website’s displayed business name from \"Beauty Parlour\" to \"Bhagyashree Makeover & Spa\" anywhere it appears in the UI branding (e.g., header brand text and footer brand text/copyright).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4",
+          "msg-5"
+        ],
+        "quotes": [
+          "Name the business as Bhagyashree Makeover & Spa",
+          "Signed up. Please add business name as given above"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header brand text shows exactly \"Bhagyashree Makeover & Spa\" (instead of \"Beauty Parlour\").",
+        "Footer brand text shows exactly \"Bhagyashree Makeover & Spa\" (instead of \"Beauty Parlour\").",
+        "Footer copyright line uses \"Bhagyashree Makeover & Spa\"."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Update SEO and social sharing metadata to use the business name \"Bhagyashree Makeover & Spa\" (HTML <title>, og:title, and twitter:title).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4",
+          "msg-5"
+        ],
+        "quotes": [
+          "Name the business as Bhagyashree Makeover & Spa",
+          "Signed up. Please add business name as given above"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The HTML document <title> includes \"Bhagyashree Makeover & Spa\".",
+        "OpenGraph title (og:title) includes \"Bhagyashree Makeover & Spa\".",
+        "Twitter title (twitter:title) includes \"Bhagyashree Makeover & Spa\"."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (compose and reuse these components instead).",
+    "Do not edit the immutable auth/actor hook files listed in SYSTEM_CONTEXT (use existing APIs as-is)."
+  ],
+  "nonGoals": [
+    "Adding online appointment booking or any new booking workflow beyond existing WhatsApp CTA.",
+    "Changing the logo image file or generating new branding assets."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
