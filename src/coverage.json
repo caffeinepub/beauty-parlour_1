@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-17T21:25:04.764Z",
+  "generatedAt": "2026-02-17T21:28:46.285Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,40 +11,39 @@
     "implemented": 2,
     "items": [
       {
-        "id": "REQ-8",
-        "summary": "Update the website’s displayed business name from \"Beauty Parlour\" to \"Bhagyashree Makeover & Spa\" anywhere it appears in the UI branding (e.g., header brand text and footer brand text/copyright).",
+        "id": "REQ-10",
+        "summary": "Configure the site-wide WhatsApp booking/chat target number to 9226121208 (India), so all existing WhatsApp CTAs open WhatsApp to this number.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/marketing/HeaderNav.tsx",
-          "frontend/src/components/marketing/Footer.tsx"
+          "frontend/src/config/whatsapp.ts",
+          "frontend/src/components/marketing/WhatsAppCTA.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/marketing/HeaderNav.tsx",
-          "frontend/src/components/marketing/Footer.tsx"
+          "frontend/src/config/whatsapp.ts",
+          "frontend/src/components/marketing/WhatsAppCTA.tsx"
         ]
       },
       {
-        "id": "REQ-9",
-        "summary": "Update SEO and social sharing metadata to use the business name \"Bhagyashree Makeover & Spa\" (HTML <title>, og:title, and twitter:title).",
+        "id": "REQ-11",
+        "summary": "Add a clickable phone contact for calls using the contact number 9226121208, including a `tel:` link that works on mobile and desktop.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/index.html"
+          "frontend/src/components/marketing/ContactSection.tsx"
         ],
         "matchedFiles": [
-          "frontend/index.html"
+          "frontend/src/components/marketing/ContactSection.tsx"
         ]
       }
     ]
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/index.html",
-    "frontend/src/components/marketing/Footer.tsx",
-    "frontend/src/components/marketing/HeaderNav.tsx",
+    "frontend/src/components/marketing/ContactSection.tsx",
+    "frontend/src/components/marketing/WhatsAppCTA.tsx",
+    "frontend/src/config/whatsapp.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

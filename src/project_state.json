@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
+  "projectStateVersion": 7,
   "summary": "Website for Bhagyashree Makeover & Spa offering makeover, hair, and skin services with both in-parlour and home service options, showcasing services and enabling WhatsApp appointment/discount inquiries.",
   "architectural_notes": [],
   "known_issues": [],
@@ -77,12 +77,34 @@
         "REQ-9"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-configure-the-site-wide-whatsapp-booking-chat-target-number-to-9226121208-india-so-all-existing-whatsapp-ctas-open-whatsapp-to-this-number",
+      "title": "Configure the site-wide WhatsApp booking/chat target number to 9226121208 (India), so all existing WhatsApp CTAs open WhatsApp to this number.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-clickable-phone-contact-for-calls-using-the-contact-number-9226121208-including-a-tel-link-that-works-on-mobile-and-desktop",
+      "title": "Add a clickable phone contact for calls using the contact number 9226121208, including a `tel:` link that works on mobile and desktop.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
       "id": "AR-1",
       "summary": "Create a beauty parlour business website with service listings (makeup, skin/facial, hair, bridal makeup, saree/dupatta draping, essential & grooming) and WhatsApp contact for appointments/discounts.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add clickable contact phone number (9226121208) for calls and update WhatsApp booking links to open chat with this number directly.",
       "reqIds": [],
       "status": "pending"
     }

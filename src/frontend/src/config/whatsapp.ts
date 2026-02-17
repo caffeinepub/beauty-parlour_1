@@ -10,8 +10,7 @@
  */
 
 export const whatsappConfig = {
-  // TODO: Replace with your actual WhatsApp number (format: country code + number, e.g., '919876543210')
-  phoneNumber: '', // Leave empty until configured
+  phoneNumber: '919226121208',
   
   defaultMessage: 'Hi! I would like to book an appointment and learn about your current discounts and services.'
 };

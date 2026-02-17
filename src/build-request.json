@@ -1,57 +1,54 @@
 {
   "kind": "build_request",
-  "title": "Update business name to Bhagyashree Makeover & Spa",
-  "projectName": "Bhagyashree Makeover & Spa",
+  "title": "Add clickable call number and configure WhatsApp booking link",
+  "projectName": "Bhagyashree Makeover",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-8",
-      "text": "Update the website’s displayed business name from \"Beauty Parlour\" to \"Bhagyashree Makeover & Spa\" anywhere it appears in the UI branding (e.g., header brand text and footer brand text/copyright).",
+      "id": "REQ-10",
+      "text": "Configure the site-wide WhatsApp booking/chat target number to 9226121208 (India), so all existing WhatsApp CTAs open WhatsApp to this number.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4",
-          "msg-5"
+          "msg-4"
         ],
         "quotes": [
-          "Name the business as Bhagyashree Makeover & Spa",
-          "Signed up. Please add business name as given above"
+          "Add contact number for call and booking via whatsapp 9226121208. Create link directly goes bookings on my WhatsApp number"
         ]
       },
       "acceptanceCriteria": [
-        "Header brand text shows exactly \"Bhagyashree Makeover & Spa\" (instead of \"Beauty Parlour\").",
-        "Footer brand text shows exactly \"Bhagyashree Makeover & Spa\" (instead of \"Beauty Parlour\").",
-        "Footer copyright line uses \"Bhagyashree Makeover & Spa\"."
+        "`frontend/src/config/whatsapp.ts` uses phone number `919226121208` (country code + number, no spaces) as the WhatsApp target.",
+        "Clicking the existing WhatsApp CTA button in the Hero section opens `https://wa.me/919226121208?...` in a new tab.",
+        "Clicking the existing WhatsApp CTA button in the Contact section opens `https://wa.me/919226121208?...` in a new tab.",
+        "No alert about WhatsApp not being configured is shown in normal usage."
       ]
     },
     {
-      "id": "REQ-9",
-      "text": "Update SEO and social sharing metadata to use the business name \"Bhagyashree Makeover & Spa\" (HTML <title>, og:title, and twitter:title).",
+      "id": "REQ-11",
+      "text": "Add a clickable phone contact for calls using the contact number 9226121208, including a `tel:` link that works on mobile and desktop.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4",
-          "msg-5"
+          "msg-4"
         ],
         "quotes": [
-          "Name the business as Bhagyashree Makeover & Spa",
-          "Signed up. Please add business name as given above"
+          "Add contact number for call and booking via whatsapp 9226121208."
         ]
       },
       "acceptanceCriteria": [
-        "The HTML document <title> includes \"Bhagyashree Makeover & Spa\".",
-        "OpenGraph title (og:title) includes \"Bhagyashree Makeover & Spa\".",
-        "Twitter title (twitter:title) includes \"Bhagyashree Makeover & Spa\"."
+        "The Contact section displays the phone number `9226121208` in the UI.",
+        "The phone number is a clickable link using `href=\"tel:+919226121208\"` (or equivalent) and triggers the device dialer when clicked on supported devices.",
+        "User-facing text for the phone/contact area is in English."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui (compose and reuse these components instead).",
-    "Do not edit the immutable auth/actor hook files listed in SYSTEM_CONTEXT (use existing APIs as-is)."
+    "Do not edit files under `frontend/src/components/ui`.",
+    "Do not modify immutable hook files listed in SYSTEM_CONTEXT."
   ],
   "nonGoals": [
-    "Adding online appointment booking or any new booking workflow beyond existing WhatsApp CTA.",
-    "Changing the logo image file or generating new branding assets."
+    "Adding an online appointment form or storing bookings in the backend.",
+    "Adding new authentication or backend functionality."
   ],
   "imageRequirements": {
     "required": [],

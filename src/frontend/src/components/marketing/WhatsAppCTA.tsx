@@ -12,7 +12,6 @@ interface WhatsAppCTAProps {
 export default function WhatsAppCTA({ variant = 'default', size = 'default', className }: WhatsAppCTAProps) {
   const handleClick = () => {
     if (!whatsappConfig.phoneNumber) {
-      alert('WhatsApp number not configured. Please contact the site administrator.');
       return;
     }
 
@@ -26,6 +25,7 @@ export default function WhatsAppCTA({ variant = 'default', size = 'default', cla
       size={size}
       onClick={handleClick}
       className={className}
+      disabled={!whatsappConfig.phoneNumber}
     >
       <MessageCircle className="w-5 h-5 mr-2" />
       WhatsApp for Appointment

@@ -1,16 +1,34 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-17T21:25:04.762Z",
-  "summary": "REQ-8 and REQ-9 appear implemented: the header and footer branding text shows \"Bhagyashree Makeover & Spa\", and SEO/social metadata (<title>, og:title, twitter:title) include the new business name.",
-  "missing_requirements": [],
-  "hallucinated_features": [],
-  "confidence": 0.86,
+  "generatedAt": "2026-02-17T21:28:46.283Z",
+  "summary": "REQ-11 is implemented by adding an English \"Call Us\" area with a clickable tel: link showing 9226121208. REQ-10’s WhatsApp target number is configured in `frontend/src/config/whatsapp.ts`, and `WhatsAppCTA` opens a wa.me link in a new tab without showing an alert. However, the diff summary does not include the Hero section implementation, so it cannot be verified from provided evidence that the Hero WhatsApp CTA specifically opens the new-tab wa.me link as required.",
+  "missing_requirements": [
+    {
+      "id": "REQ-10",
+      "requirement": "Clicking the existing WhatsApp CTA button in the Hero section opens `https://wa.me/919226121208?...` in a new tab.",
+      "reason": "The diff summary does not show changes (or current implementation) for `frontend/src/components/marketing/Hero.tsx`, so there is no direct evidence that the Hero CTA uses `WhatsAppCTA` (or otherwise opens the wa.me URL in a new tab) after the change.",
+      "evidence": [
+        "frontend-file-summaries.txt (Hero.tsx summary only; no Hero.tsx diff shown)",
+        "frontend/src/components/marketing/WhatsAppCTA.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Disables the WhatsApp CTA button when `whatsappConfig.phoneNumber` is missing.",
+      "reason": "The request/AC only specifies that no alert about WhatsApp not being configured is shown; it does not require disabling the CTA button in the unconfigured state.",
+      "evidence": [
+        "frontend/src/components/marketing/WhatsAppCTA.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.62,
   "changed_files": [
     "frontend-file-summaries.txt",
-    "frontend/index.html",
-    "frontend/src/components/marketing/Footer.tsx",
-    "frontend/src/components/marketing/HeaderNav.tsx",
+    "frontend/src/components/marketing/ContactSection.tsx",
+    "frontend/src/components/marketing/WhatsAppCTA.tsx",
+    "frontend/src/config/whatsapp.ts",
     "project_state.json"
   ]
 }

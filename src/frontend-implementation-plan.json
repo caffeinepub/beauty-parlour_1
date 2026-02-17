@@ -1,42 +1,43 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Update UI branding and metadata to Bhagyashree Makeover & Spa",
+  "title": "Bhagyashree Makeover: phone + WhatsApp contact configuration",
   "requirements": [
     {
-      "id": "REQ-8",
-      "summary": "Replace all visible UI branding text from “Beauty Parlour” to “Bhagyashree Makeover & Spa” in header and footer.",
+      "id": "REQ-10",
+      "summary": "Set the site-wide WhatsApp target number and ensure all WhatsApp CTAs open the correct wa.me link in a new tab without configuration alerts.",
       "acceptanceCriteria": [
-        "Header brand text shows exactly \"Bhagyashree Makeover & Spa\" (instead of \"Beauty Parlour\").",
-        "Footer brand text shows exactly \"Bhagyashree Makeover & Spa\" (instead of \"Beauty Parlour\").",
-        "Footer copyright line uses \"Bhagyashree Makeover & Spa\"."
+        "`frontend/src/config/whatsapp.ts` uses phone number `919226121208` (country code + number, no spaces) as the WhatsApp target.",
+        "Clicking the existing WhatsApp CTA button in the Hero section opens `https://wa.me/919226121208?...` in a new tab.",
+        "Clicking the existing WhatsApp CTA button in the Contact section opens `https://wa.me/919226121208?...` in a new tab.",
+        "No alert about WhatsApp not being configured is shown in normal usage."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/marketing/HeaderNav.tsx",
+          "path": "frontend/src/config/whatsapp.ts",
           "operation": "modify",
-          "description": "Update the header brand text to exactly “Bhagyashree Makeover & Spa” anywhere the header currently displays “Beauty Parlour” (keep logo file unchanged). Optionally align the logo alt text with the new business name while preserving the same image asset."
+          "description": "Configure `whatsappConfig.phoneNumber` to `919226121208` and keep the existing default prefilled message for wa.me link generation."
         },
         {
-          "path": "frontend/src/components/marketing/Footer.tsx",
+          "path": "frontend/src/components/marketing/WhatsAppCTA.tsx",
           "operation": "modify",
-          "description": "Update footer brand text and the copyright line to exactly use “Bhagyashree Makeover & Spa” instead of “Beauty Parlour” (keep existing layout, links, and logo asset unchanged)."
+          "description": "Adjust WhatsApp CTA click behavior to always open `https://wa.me/${whatsappConfig.phoneNumber}?text=...` in a new tab and avoid using an `alert()` for missing configuration (e.g., disable/no-op with non-blocking feedback), so normal usage never shows a configuration alert."
         }
       ]
     },
     {
-      "id": "REQ-9",
-      "summary": "Update SEO and social sharing title metadata to use “Bhagyashree Makeover & Spa”.",
+      "id": "REQ-11",
+      "summary": "Add a clickable phone number in the Contact section using a tel: link for calls.",
       "acceptanceCriteria": [
-        "The HTML document <title> includes \"Bhagyashree Makeover & Spa\".",
-        "OpenGraph title (og:title) includes \"Bhagyashree Makeover & Spa\".",
-        "Twitter title (twitter:title) includes \"Bhagyashree Makeover & Spa\"."
+        "The Contact section displays the phone number `9226121208` in the UI.",
+        "The phone number is a clickable link using `href=\"tel:+919226121208\"` (or equivalent) and triggers the device dialer when clicked on supported devices.",
+        "User-facing text for the phone/contact area is in English."
       ],
       "file_operations": [
         {
-          "path": "frontend/index.html",
+          "path": "frontend/src/components/marketing/ContactSection.tsx",
           "operation": "modify",
-          "description": "Replace occurrences of “Beauty Parlour” in the document <title>, og:title, and twitter:title meta tags so each includes “Bhagyashree Makeover & Spa”, preserving other descriptive wording and keeping existing social image references unchanged."
+          "description": "Add a phone contact row/card within the Contact section that displays `9226121208` in English and renders it as a clickable `tel:+919226121208` link (mobile/desktop compatible), keeping styling consistent with the existing layout."
         }
       ]
     }

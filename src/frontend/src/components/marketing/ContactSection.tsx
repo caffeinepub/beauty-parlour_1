@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { MessageCircle, MapPin, Clock } from 'lucide-react';
+import { MessageCircle, MapPin, Clock, Phone } from 'lucide-react';
 import WhatsAppCTA from './WhatsAppCTA';
 
 export default function ContactSection() {
@@ -36,7 +36,19 @@ export default function ContactSection() {
                   <WhatsAppCTA variant="default" size="lg" />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 pt-8 border-t border-border">
+                <div className="grid md:grid-cols-3 gap-6 pt-8 border-t border-border">
+                  <div className="flex items-start gap-3 text-left">
+                    <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                    <div>
+                      <div className="font-medium text-foreground mb-1">Call Us</div>
+                      <a 
+                        href="tel:+919226121208" 
+                        className="text-sm text-primary hover:underline font-medium"
+                      >
+                        9226121208
+                      </a>
+                    </div>
+                  </div>
                   <div className="flex items-start gap-3 text-left">
                     <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>

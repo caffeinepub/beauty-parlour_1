@@ -1,10 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Update all visible branding and page metadata to use the business name “Bhagyashree Makeover & Spa”.
+**Goal:** Make WhatsApp booking CTAs open a configured WhatsApp chat to 9226121208 and add a clickable call phone number in the Contact section.
 
 **Planned changes:**
-- Replace any UI branding text that currently shows “Beauty Parlour” with “Bhagyashree Makeover & Spa” (e.g., header brand text and footer brand text/copyright).
-- Update SEO and social sharing metadata to include “Bhagyashree Makeover & Spa” (HTML `<title>`, `og:title`, `twitter:title`).
+- Update the site-wide WhatsApp configuration to use target number `919226121208` so all existing WhatsApp CTAs open a `wa.me` link in a new tab without showing any “not configured” alert.
+- Add the phone number `9226121208` to the Contact section as English UI text and make it a clickable `tel:` link (`tel:+919226121208`) for calling on supported devices.
 
-**User-visible outcome:** The website consistently shows “Bhagyashree Makeover & Spa” in the header/footer branding and in browser/tab title and social share previews.
+**User-visible outcome:** Visitors can click existing WhatsApp buttons (e.g., in Hero and Contact) to chat/book on WhatsApp with 9226121208, and can click the phone number in the Contact section to place a call.
